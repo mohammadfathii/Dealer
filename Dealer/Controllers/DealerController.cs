@@ -35,14 +35,7 @@ namespace Dealer.Controllers
                 CityId = dealer.CityId,
             });
 
-            return RedirectToAction("Dealer", result.Id);
-        }
-
-        public IActionResult Dealer(int DealerId)
-        {
-            var dealer = _dealerRepository.Get(DealerId);
-
-            return View(dealer);
+            return Redirect("Index");
         }
 
     }
