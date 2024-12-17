@@ -35,7 +35,7 @@ namespace Dealer.Controllers
                 CityId = dealer.CityId,
             });
 
-            return Redirect("Index");
+            return Redirect("/");
         }
 
     }
