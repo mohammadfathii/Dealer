@@ -1,0 +1,29 @@
+﻿@model CreateDealerViewModel
+
+<form asp-controller="Dealer" asp-action="Create" method="post">
+    
+    <div>
+        <label for="@Model.Code">Code : </label>
+        <input type="number" asp-for="@Model.Code" />
+        <span asp-validation-for="@Model.Code"></span>
+    </div>
+    <div>
+        <label for="@Model.DealerNo">DealerNo : </label>
+        <input type="number" asp-for="@Model.DealerNo" />
+        <span asp-validation-for="@Model.DealerNo"></span>
+    </div>
+    <div>
+        <label for="@Model.Name">Name :</label>
+        <input type="text" asp-for="@Model.Name" />
+        <span asp-validation-for="@Model.Name"></span>
+    </div>
+    <div>
+        <label for="@Model.CityId">CityId</label>
+        <input type="number" asp-for="@Model.CityId" />
+        <span asp-validation-for="@Model.CityId"></span>
+    </div>
+
+    <button type="submit">Create</button>
+
+</form>
+

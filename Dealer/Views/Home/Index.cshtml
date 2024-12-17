@@ -1,0 +1,43 @@
+﻿@model HomeViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div>
+    <h1>Dealers : </h1>
+
+    @if (Model.Dealers != null && Model.Dealers.Count > 0)
+    {
+        @foreach (var dealer in Model.Dealers)
+        {
+            <div>
+                <p>id : @dealer.Id</p>
+                <p>code : @dealer.Code</p>
+                <p>dealerNo : @dealer.DealerNo</p>
+                <p>status : @dealer.Status</p>
+                <p>cityId : @dealer.CityId</p>
+            </div>
+            <hr />
+        }
+
+    }
+
+</div>
+
+<div>
+    <h1>Cities : </h1>
+    @if (Model != null && Model.Cities.Count > 0)
+    {
+        @foreach (var city in Model.Cities)
+        {
+            <div>
+                <p>id : @city.Id</p>
+                <p>code : @city.Code</p>
+                <p>name : @city.Name</p>
+            </div>
+            <hr />
+        }
+
+    }
+</div>

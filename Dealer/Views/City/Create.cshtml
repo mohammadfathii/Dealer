@@ -1,0 +1,19 @@
+﻿@model CreateCityViewModel
+
+<form asp-controller="City" asp-action="Create" method="post">
+
+    <div>
+        <label for="@Model.Code">Code : </label>
+        <input type="number" asp-for="@Model.Code" />
+        <span asp-validation-for="@Model.Code"></span>
+    </div>
+    <div>
+        <label for="@Model.Name">Name :</label>
+        <input type="text" asp-for="@Model.Name" />
+        <span asp-validation-for="@Model.Name"></span>
+    </div>
+
+    <button type="submit">Create</button>
+
+</form>
+
